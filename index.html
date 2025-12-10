@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vidde Profilmanual</title>
+    <!-- Import Google Fonts for Hedvig Letters Serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
+    
+    <!-- Import General Sans from Fontshare -->
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@200,300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['General Sans', 'sans-serif'],
+              serif: ['"Hedvig Letters Serif"', 'serif'],
+            },
+            fontWeight: {
+              bold: '500',
+            },
+            colors: {
+              brand: {
+                dark: '#0F161A',
+                slate: '#677A7E',
+                gold: '#C69865',
+                brown: '#2A2119',
+                light: '#F3FBFC',
+                beige: '#F3EBE1',
+                white: '#FFFFFF',
+              }
+            },
+            borderRadius: {
+              '4xl': '2.5rem',
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/"
+  }
+}
+</script>
+</head>
+  <body class="bg-brand-white text-brand-dark font-sans antialiased selection:bg-brand-gold selection:text-brand-white">
+    <div id="root"></div>
+  </body>
+</html>
