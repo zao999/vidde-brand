@@ -3,6 +3,18 @@ import { Sidebar } from './components/Sidebar';
 import { Section } from './components/Section';
 import { BRAND_COLORS, MENU_ITEMS } from './constants';
 import { LogoFull, LogoMark, LogoName, LogoLockup } from './components/BrandAssets';
+const bannerLinked = new URL('./components/1.jpg', import.meta.url).href;
+const profileLinked = new URL('./components/2.jpg', import.meta.url).href;
+const profileInsta = new URL('./components/3.jpg', import.meta.url).href;
+const profileYT = new URL('./components/4.jpg', import.meta.url).href;
+const visuals = [
+   new URL('./components/1.jpg', import.meta.url).href,
+   new URL('./components/2.jpg', import.meta.url).href,
+   new URL('./components/3.jpg', import.meta.url).href,
+   new URL('./components/4.jpg', import.meta.url).href,
+   new URL('./components/5.jpg', import.meta.url).href,
+   new URL('./components/6.jpg', import.meta.url).href,
+];
 
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState('introduksjon');
@@ -36,10 +48,10 @@ const App: React.FC = () => {
            <LogoMark className="w-8 h-8 text-brand-dark" />
            <span className="font-bold tracking-wide">Vidde</span>
         </div>
-        <button 
-          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-          className="p-2 text-brand-dark bg-brand-light rounded-lg"
-        >
+            <button type="button"
+               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+               className="p-2 text-brand-dark bg-brand-light rounded-lg"
+            >
           {isSidebarOpen ? "Lukk" : "Meny"}
         </button>
       </div>
@@ -54,7 +66,7 @@ const App: React.FC = () => {
       <main className="lg:ml-[280px] p-6 lg:p-12 max-w-[1920px]">
         
         {/* Intro Hero */}
-        <section id="introduksjon" className="min-h-[90vh] flex flex-col justify-center mb-12 rounded-[3rem] bg-brand-dark text-white p-8 lg:p-24 relative overflow-hidden">
+      <section id="introduksjon" className="min-h-[90vh] flex flex-col justify-center mb-12 rounded-[3rem] text-white p-8 lg:p-24 relative overflow-hidden" style={{ backgroundColor: '#0F161A' }}>
            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold opacity-10 blur-[150px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-slate opacity-20 blur-[100px] rounded-full -translate-x-1/3 translate-y-1/3"></div>
            
@@ -66,54 +78,71 @@ const App: React.FC = () => {
                vidde <span className="font-serif text-brand-gold">hever</span><br/>
                <span>kompetanse.</span>
              </h1>
-             <p className="text-xl lg:text-2xl text-brand-slate text-opacity-80 max-w-2xl leading-relaxed font-normal tracking-wide">
-               En visuell identitet bygget på nordisk minimalisme, varme jordtoner og menneskelig interaksjon.
-             </p>
+                   <p className="text-xl lg:text-2xl max-w-2xl leading-relaxed font-normal tracking-wide" style={{ color: '#6E7881' }}>
+                      En visuell identitet bygget på nordisk minimalisme, varme jordtoner og menneskelig interaksjon.
+                   </p>
            </div>
         </section>
 
         {/* Logomerket */}
         <Section id="logomerket" title="Symbol">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-             {/* 1. Dark / White (High Contrast) */}
+             {/* 1. Dark / Light Blue */}
              <div className="aspect-square bg-brand-dark rounded-[2.5rem] flex items-center justify-center p-12 group hover:scale-105 transition-transform duration-500 ease-out">
-               <LogoMark className="w-full h-full text-white" />
+                     <svg width="100%" height="100%" viewBox="0 0 300 291" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M241.866 95.3467L170.623 271H131.243L60 95.3467H99.0224L151.649 232.555L204.991 95.3467H241.866Z" fill="#F3FBFC"/>
+                        <path d="M268 42.2052C268 48.3918 265.494 53.6945 260.482 58.1134C255.709 62.3114 249.503 64.4104 241.866 64.4104C233.99 64.4104 227.546 62.3114 222.534 58.1134C217.76 53.6945 215.374 48.3918 215.374 42.2052C215.374 35.5768 217.76 30.2741 222.534 26.297C227.546 22.099 233.99 20 241.866 20C249.503 20 255.709 22.099 260.482 26.297C265.494 30.2741 268 35.5768 268 42.2052Z" fill="#F3FBFC"/>
+                     </svg>
              </div>
              
              {/* 2. Slate / White */}
              <div className="aspect-square bg-brand-slate rounded-[2.5rem] flex items-center justify-center p-12 group hover:scale-105 transition-transform duration-500 ease-out">
-               <LogoMark className="w-full h-full text-white" />
+                     <svg width="100%" height="100%" viewBox="0 0 300 291" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M241.866 95.3467L170.623 271H131.243L60 95.3467H99.0224L151.649 232.555L204.991 95.3467H241.866Z" fill="white"/>
+                        <path d="M268 42.2052C268 48.3918 265.494 53.6945 260.482 58.1134C255.709 62.3114 249.503 64.4104 241.866 64.4104C233.99 64.4104 227.546 62.3114 222.534 58.1134C217.76 53.6945 215.374 48.3918 215.374 42.2052C215.374 35.5768 217.76 30.2741 222.534 26.297C227.546 22.099 233.99 20 241.866 20C249.503 20 255.709 22.099 260.482 26.297C265.494 30.2741 268 35.5768 268 42.2052Z" fill="white"/>
+                     </svg>
              </div>
 
-             {/* 3. Brown / Beige */}
+             {/* 3. Brown / Light Gold */}
              <div className="aspect-square bg-brand-brown rounded-[2.5rem] flex items-center justify-center p-12 group hover:scale-105 transition-transform duration-500 ease-out">
-               <LogoMark className="w-full h-full text-brand-beige" />
+                     <svg width="100%" height="100%" viewBox="0 0 300 291" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M241.866 95.3467L170.623 271H131.243L60 95.3467H99.0224L151.649 232.555L204.991 95.3467H241.866Z" fill="#F5E6D3"/>
+                        <path d="M268 42.2052C268 48.3918 265.494 53.6945 260.482 58.1134C255.709 62.3114 249.503 64.4104 241.866 64.4104C233.99 64.4104 227.546 62.3114 222.534 58.1134C217.76 53.6945 215.374 48.3918 215.374 42.2052C215.374 35.5768 217.76 30.2741 222.534 26.297C227.546 22.099 233.99 20 241.866 20C249.503 20 255.709 22.099 260.482 26.297C265.494 30.2741 268 35.5768 268 42.2052Z" fill="#F5E6D3"/>
+                     </svg>
              </div>
 
              {/* 4. Gold / White (Soft) */}
              <div className="aspect-square bg-brand-gold rounded-[2.5rem] flex items-center justify-center p-12 group hover:scale-105 transition-transform duration-500 ease-out">
-               <LogoMark className="w-full h-full text-white" />
+                     <svg width="100%" height="100%" viewBox="0 0 300 291" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M241.866 95.3467L170.623 271H131.243L60 95.3467H99.0224L151.649 232.555L204.991 95.3467H241.866Z" fill="white"/>
+                        <path d="M268 42.2052C268 48.3918 265.494 53.6945 260.482 58.1134C255.709 62.3114 249.503 64.4104 241.866 64.4104C233.99 64.4104 227.546 62.3114 222.534 58.1134C217.76 53.6945 215.374 48.3918 215.374 42.2052C215.374 35.5768 217.76 30.2741 222.534 26.297C227.546 22.099 233.99 20 241.866 20C249.503 20 255.709 22.099 260.482 26.297C265.494 30.2741 268 35.5768 268 42.2052Z" fill="white"/>
+                     </svg>
              </div>
 
              {/* 5. White / Dark */}
              <div className="aspect-square bg-white rounded-[2.5rem] flex items-center justify-center p-12 group hover:scale-105 transition-transform duration-500 ease-out">
-               <LogoMark className="w-full h-full text-brand-dark" />
+                     <svg width="100%" height="100%" viewBox="0 0 300 291" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M241.866 95.3467L170.623 271H131.243L60 95.3467H99.0224L151.649 232.555L204.991 95.3467H241.866Z" fill="#0F161A"/>
+                        <path d="M268 42.2052C268 48.3918 265.494 53.6945 260.482 58.1134C255.709 62.3114 249.503 64.4104 241.866 64.4104C233.99 64.4104 227.546 62.3114 222.534 58.1134C217.76 53.6945 215.374 48.3918 215.374 42.2052C215.374 35.5768 217.76 30.2741 222.534 26.297C227.546 22.099 233.99 20 241.866 20C249.503 20 255.709 22.099 260.482 26.297C265.494 30.2741 268 35.5768 268 42.2052Z" fill="#0F161A"/>
+                     </svg>
              </div>
 
              {/* 6. Light / Slate */}
              <div className="aspect-square bg-brand-light rounded-[2.5rem] flex items-center justify-center p-12 group hover:scale-105 transition-transform duration-500 ease-out">
-               <LogoMark className="w-full h-full text-brand-slate" />
+                     <svg width="100%" height="100%" viewBox="0 0 300 291" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M241.866 95.3467L170.623 271H131.243L60 95.3467H99.0224L151.649 232.555L204.991 95.3467H241.866Z" fill="#6E7881"/>
+                        <path d="M268 42.2052C268 48.3918 265.494 53.6945 260.482 58.1134C255.709 62.3114 249.503 64.4104 241.866 64.4104C233.99 64.4104 227.546 62.3114 222.534 58.1134C217.76 53.6945 215.374 48.3918 215.374 42.2052C215.374 35.5768 217.76 30.2741 222.534 26.297C227.546 22.099 233.99 20 241.866 20C249.503 20 255.709 22.099 260.482 26.297C265.494 30.2741 268 35.5768 268 42.2052Z" fill="#6E7881"/>
+                     </svg>
              </div>
 
              {/* 7. Beige / Brown */}
              <div className="aspect-square bg-brand-beige rounded-[2.5rem] flex items-center justify-center p-12 group hover:scale-105 transition-transform duration-500 ease-out">
-               <LogoMark className="w-full h-full text-brand-brown" />
+                     <svg width="100%" height="100%" viewBox="0 0 300 291" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M241.866 95.3467L170.623 271H131.243L60 95.3467H99.0224L151.649 232.555L204.991 95.3467H241.866Z" fill="#2A2119"/>
+                        <path d="M268 42.2052C268 48.3918 265.494 53.6945 260.482 58.1134C255.709 62.3114 249.503 64.4104 241.866 64.4104C233.99 64.4104 227.546 62.3114 222.534 58.1134C217.76 53.6945 215.374 48.3918 215.374 42.2052C215.374 35.5768 217.76 30.2741 222.534 26.297C227.546 22.099 233.99 20 241.866 20C249.503 20 255.709 22.099 260.482 26.297C265.494 30.2741 268 35.5768 268 42.2052Z" fill="#2A2119"/>
+                     </svg>
              </div>
 
-             {/* 8. Dark / Gold */}
-             <div className="aspect-square bg-brand-dark rounded-[2.5rem] flex items-center justify-center p-12 group hover:scale-105 transition-transform duration-500 ease-out">
-               <LogoMark className="w-full h-full text-brand-gold" />
-             </div>
           </div>
           <div className="mt-12 bg-white rounded-3xl p-12">
              <div className="flex flex-col md:flex-row gap-12 items-start">
@@ -136,7 +165,7 @@ const App: React.FC = () => {
           <div className="flex flex-col gap-8">
             {/* Primary Logo Construction */}
             <div className="bg-white rounded-[2.5rem] p-12 lg:p-32 flex items-center justify-center min-h-[400px]">
-               <LogoLockup className="w-full max-w-3xl" color="#0F161A" secondaryColor="#677A7E" />
+               <LogoLockup className="w-full max-w-3xl" color="#0F161A" secondaryColor="#6E7881" />
             </div>
 
             {/* Color Variations Grid */}
@@ -269,10 +298,10 @@ const App: React.FC = () => {
                 <div className="px-2">
                   <h4 className="font-medium text-brand-dark text-2xl mb-4 tracking-tight">{color.name}</h4>
                   <div className="space-y-2 font-mono text-sm text-brand-slate leading-relaxed opacity-80">
-                    <p><span className="opacity-40 w-12 inline-block">PMS</span> {color.pms}</p>
-                    <p><span className="opacity-40 w-12 inline-block">CMYK</span> {color.cmyk}</p>
-                    <p><span className="opacity-40 w-12 inline-block">RGB</span> {color.rgb}</p>
-                    <p><span className="opacity-40 w-12 inline-block">HEX</span> {color.hex}</p>
+                    <p><span className="w-12 inline-block">PMS</span> {color.pms}</p>
+                    <p><span className="w-12 inline-block">CMYK</span> {color.cmyk}</p>
+                    <p><span className="w-12 inline-block">RGB</span> {color.rgb}</p>
+                    <p><span className="w-12 inline-block">HEX</span> {color.hex}</p>
                   </div>
                 </div>
               </div>
@@ -310,6 +339,21 @@ const App: React.FC = () => {
                   </div>
                </div>
             </div>
+               {/* Brand visuals grid */}
+               <div className="mt-8">
+                  <h4 className="font-medium text-xl mb-4">Brand Visuals</h4>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                     {visuals.map((src, i) => (
+                        <div key={i} className="aspect-square rounded-[1.25rem] overflow-hidden group bg-gray-100">
+                           <img
+                             src={src}
+                             alt={`Brand visual ${i + 1}`}
+                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                           />
+                        </div>
+                     ))}
+                  </div>
+               </div>
           </div>
         </Section>
 
@@ -322,14 +366,10 @@ const App: React.FC = () => {
             <div>
               <h3 className="text-2xl font-medium mb-8 tracking-tight">LinkedIn & Facebook</h3>
               <div className="bg-white rounded-[2.5rem] overflow-hidden">
-                {/* Banner */}
-                <div className="aspect-[4/1] bg-brand-slate relative flex items-center justify-center overflow-hidden">
-                     {/* Abstract bg */}
-                     <div className="absolute inset-0 opacity-20">
-                        <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                            <path d="M0 100 L100 0 L100 100 Z" fill="#0F161A" />
-                        </svg>
-                     </div>
+                {/* Banner (uses project JPEG) */}
+                <div className="aspect-[4/1] relative flex items-center justify-center overflow-hidden bg-brand-slate">
+                     <img src={bannerLinked} alt="Vidde banner" className="absolute inset-0 w-full h-full object-cover" />
+                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                      <LogoLockup className="w-64 text-white relative z-10" />
                      <div className="absolute bottom-6 right-6 bg-brand-dark/20 backdrop-blur-md px-4 py-2 rounded-full text-[10px] text-white font-mono tracking-widest">
                         COVER 1128x191
@@ -337,12 +377,14 @@ const App: React.FC = () => {
                 </div>
                 <div className="px-10 pb-10 relative">
                      <div className="flex justify-between items-end -mt-16">
-                        {/* Profile Pic */}
-                        <div className="w-32 h-32 rounded-full bg-brand-dark shadow-2xl flex items-center justify-center relative z-10 p-2">
-                             <div className="w-full h-full rounded-full border-4 border-white flex items-center justify-center">
-                                <LogoMark className="w-12 text-white" />
-                             </div>
-                        </div>
+                               {/* Profile Pic (use YouTube photo for all) */}
+                               <div className="w-32 h-32 rounded-full shadow-2xl relative z-10 p-2 bg-white overflow-hidden">
+                                  <div
+                                    aria-hidden
+                                    className="w-full h-full rounded-full border-4 border-white bg-center bg-cover"
+                                    style={{ backgroundImage: `url(${profileYT})` }}
+                                  />
+                               </div>
                         <div className="mb-2 text-right">
                             <h4 className="font-bold text-xl text-brand-dark">Vidde Kompetanse</h4>
                             <p className="text-brand-slate text-sm font-medium tracking-wide">Education Management • Oslo</p>
@@ -357,15 +399,15 @@ const App: React.FC = () => {
               <h3 className="text-2xl font-medium mb-8 tracking-tight">Instagram</h3>
                <div className="bg-white rounded-[2.5rem] p-12 max-w-2xl">
                   <div className="flex items-center gap-10 mb-10">
-                     <div className="w-24 h-24 rounded-full bg-brand-dark flex items-center justify-center relative">
-                        <LogoMark className="w-10 text-white" />
+                     <div className="w-24 h-24 rounded-full overflow-hidden relative bg-white">
+                        <div aria-hidden className="w-full h-full rounded-full bg-center bg-cover" style={{ backgroundImage: `url(${profileYT})` }} />
                      </div>
                      <div>
                         <h4 className="font-bold text-lg mb-2 tracking-wide">vidde.kompetanse</h4>
                         <p className="text-sm text-brand-slate leading-relaxed">
                            <span className="font-bold text-brand-dark">Vidde.</span> Vi hever kompetanse gjennom innsikt og praksis.<br/>
                            <span className="opacity-60">#vidde #kompetanse #ledelse</span><br/>
-                           <a href="#" className="text-brand-dark font-medium hover:underline decoration-brand-gold underline-offset-4">www.vidde.no</a>
+                               <a href="https://www.vidde.no" className="text-brand-dark font-medium hover:underline decoration-brand-gold underline-offset-4">www.vidde.no</a>
                         </p>
                      </div>
                   </div>
@@ -391,8 +433,8 @@ const App: React.FC = () => {
                       <LogoFull className="w-48 text-white opacity-90" />
                   </div>
                   <div className="px-10 py-8 flex items-center gap-6">
-                       <div className="w-16 h-16 rounded-full bg-brand-gold flex items-center justify-center shrink-0">
-                          <LogoMark className="w-8 text-brand-dark" />
+                       <div className="w-16 h-16 rounded-full overflow-hidden shrink-0 bg-white">
+                          <div aria-hidden className="w-full h-full rounded-full bg-center bg-cover" style={{ backgroundImage: `url(${profileYT})` }} />
                        </div>
                        <div>
                           <h4 className="font-bold text-lg tracking-wide">Vidde TV</h4>
@@ -428,7 +470,7 @@ const App: React.FC = () => {
                          <div className="bg-white/[0.02] backdrop-blur-3xl p-10 rounded-[2.5rem]">
                              <span className="text-xs font-bold tracking-widest uppercase text-brand-slate mb-4 block">Masterclass</span>
                              <h4 className="text-3xl font-serif text-brand-dark leading-tight mb-8">Psykologisk trygghet i ledergruppen.</h4>
-                             <button className="w-full py-5 bg-brand-dark text-white rounded-full text-xs font-bold tracking-widest uppercase hover:bg-brand-slate transition-colors">Meld deg på</button>
+                             <button type="button" className="w-full py-5 bg-brand-dark text-white rounded-full text-xs font-bold tracking-widest uppercase hover:bg-brand-slate transition-colors">Meld deg på</button>
                          </div>
                       </div>
                    </div>
@@ -445,7 +487,7 @@ const App: React.FC = () => {
                           <p className="text-white/60 text-lg font-medium tracking-wide">Nytt kull starter 15. august.</p>
                        </div>
                        
-                       <button className="w-full py-5 bg-white text-brand-dark rounded-full text-xs font-bold tracking-widest uppercase">Les mer</button>
+                           <button type="button" className="w-full py-5 bg-white text-brand-dark rounded-full text-xs font-bold tracking-widest uppercase">Les mer</button>
                    </div>
 
                    {/* Story 3 - High Converting Split */}
@@ -460,7 +502,7 @@ const App: React.FC = () => {
                            <p className="text-brand-dark text-xl font-medium leading-relaxed tracking-wide">
                               Sikre din plass på høstens viktigste konferanse.
                            </p>
-                           <button className="flex items-center justify-between w-full p-5 bg-brand-light rounded-3xl group hover:bg-brand-beige transition-colors">
+                               <button type="button" className="flex items-center justify-between w-full p-5 bg-brand-light rounded-3xl group hover:bg-brand-beige transition-colors">
                               <span className="font-bold text-xs tracking-widest uppercase text-brand-dark">Kjøp billett</span>
                               <div className="w-8 h-8 rounded-full bg-brand-dark text-white flex items-center justify-center text-sm">→</div>
                            </button>
@@ -487,7 +529,7 @@ const App: React.FC = () => {
                               </div>
                           </div>
                        </div>
-                       <button className="relative z-10 w-full py-5 bg-white/10 backdrop-blur-md text-white rounded-full text-xs font-bold tracking-widest uppercase hover:bg-white hover:text-brand-brown transition-colors">Se stillinger</button>
+                           <button type="button" className="relative z-10 w-full py-5 bg-white/10 backdrop-blur-md text-white rounded-full text-xs font-bold tracking-widest uppercase hover:bg-white hover:text-brand-brown transition-colors">Se stillinger</button>
                    </div>
 
                    {/* Story 5: Podcast Teaser (Clean) */}
@@ -508,12 +550,12 @@ const App: React.FC = () => {
                        <div className="w-full h-1.5 bg-brand-dark/5 mb-12 rounded-full overflow-hidden">
                            <div className="w-1/3 h-full bg-brand-dark"></div>
                        </div>
-                       <h3 className="text-brand-dark font-bold text-[10px] uppercase tracking-widest mb-4 opacity-40">Innsikt</h3>
+                       <h3 className="text-brand-dark font-bold text-[10px] uppercase tracking-widest mb-4">Innsikt</h3>
                        <p className="text-4xl font-serif text-brand-dark leading-tight mb-10">
                            40% av ansatte føler seg mindre produktive uten riktig kompetanseheving.
                        </p>
                        <div className="mt-auto">
-                           <button className="w-full py-5 bg-white text-brand-dark rounded-3xl text-xs font-bold tracking-widest uppercase flex items-center justify-center gap-3">
+                               <button type="button" className="w-full py-5 bg-white text-brand-dark rounded-3xl text-xs font-bold tracking-widest uppercase flex items-center justify-center gap-3">
                                Last ned rapport <span className="text-brand-gold text-lg">↓</span>
                            </button>
                        </div>
@@ -524,7 +566,7 @@ const App: React.FC = () => {
                        <span className="text-white/80 font-bold uppercase tracking-widest text-xs mb-10">Konferansen 2026</span>
                        <div className="text-[12rem] font-serif text-white leading-none mb-6">03</div>
                        <div className="text-xl font-medium text-brand-gold uppercase tracking-widest">Dager igjen</div>
-                       <button className="absolute bottom-10 w-full max-w-xs py-5 bg-brand-gold text-brand-dark font-bold tracking-widest uppercase rounded-full text-xs">Sikre din plass</button>
+                           <button type="button" className="absolute bottom-10 w-full max-w-xs py-5 bg-brand-gold text-brand-dark font-bold tracking-widest uppercase rounded-full text-xs">Sikre din plass</button>
                    </div>
 
                    {/* Story 8: Testimonial (Trust) */}
@@ -605,7 +647,7 @@ const App: React.FC = () => {
                        <span className="text-brand-dark/60 font-bold tracking-widest text-[10px] uppercase mb-4">Early Bird</span>
                        <h3 className="text-8xl font-serif text-brand-dark mb-4">-30%</h3>
                        <p className="text-brand-dark font-medium text-sm mb-8 max-w-[180px] mx-auto leading-relaxed">På alle lederkurs ved bestilling før 1. juni.</p>
-                       <button className="bg-brand-dark text-white px-8 py-4 rounded-full font-bold text-xs tracking-widest uppercase mx-auto">Bestill nå</button>
+                       <button type="button" className="bg-brand-dark text-white px-8 py-4 rounded-full font-bold text-xs tracking-widest uppercase mx-auto">Bestill nå</button>
                    </div>
 
                    {/* Feed 4: Minimal Photo w/ Tag */}
@@ -697,7 +739,7 @@ const App: React.FC = () => {
                           <LogoMark className="w-8 text-brand-dark mb-6" />
                           <h4 className="text-3xl font-serif text-brand-dark mb-3">Bærekraftig ledelse</h4>
                           <p className="text-sm text-brand-slate font-medium mb-8 leading-relaxed tracking-wide">Last ned vår nyeste whitepaper gratis.</p>
-                          <button className="bg-brand-dark text-white px-6 py-3 rounded-full text-[10px] font-bold tracking-widest uppercase">Last ned PDF</button>
+                          <button type="button" className="bg-brand-dark text-white px-6 py-3 rounded-full text-[10px] font-bold tracking-widest uppercase">Last ned PDF</button>
                        </div>
                    </div>
 
@@ -705,9 +747,9 @@ const App: React.FC = () => {
                    <div className="aspect-[1.91/1] bg-brand-dark rounded-[2.5rem] relative overflow-hidden group flex items-center justify-center p-10 text-center">
                        <div>
                           <h4 className="text-4xl text-white font-serif mb-8">Bli en av oss.</h4>
-                          <div className="inline-block bg-white text-brand-dark px-10 py-4 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-brand-light transition-colors cursor-pointer">
+                          <button type="button" className="inline-block bg-white text-brand-dark px-10 py-4 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-brand-light transition-colors">
                              Se ledige stillinger
-                          </div>
+                          </button>
                        </div>
                    </div>
 
@@ -729,9 +771,9 @@ const App: React.FC = () => {
                            <span className="text-white/60 text-[10px] font-bold uppercase tracking-widest mb-3 block">KUNDEHISTORIE</span>
                            <h4 className="text-white font-serif text-2xl leading-normal">Equinor valgte Vidde for lederutvikling.</h4>
                        </div>
-                       <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-brand-brown transition-colors text-white cursor-pointer text-2xl">
+                        <button type="button" aria-label="Åpne case study" className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-brand-brown transition-colors text-white text-2xl">
                            ↗
-                       </div>
+                        </button>
                    </div>
 
                    {/* Link 6: Newsletter (Clean) */}
@@ -745,11 +787,11 @@ const App: React.FC = () => {
 
                    {/* Link 7: Video Thumbnail */}
                    <div className="aspect-[1.91/1] bg-brand-slate rounded-[2.5rem] relative overflow-hidden group">
-                       <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover opacity-40 mix-blend-multiply" alt="Video" />
+                       <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover mix-blend-multiply" alt="Video" />
                        <div className="absolute inset-0 flex items-center justify-center">
-                           <div className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
-                               <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                           </div>
+                              <button type="button" aria-label="Spill av webinar" className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                                 <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5v14l11-7z"/></svg>
+                              </button>
                        </div>
                        <div className="absolute bottom-8 left-8 text-white font-bold text-xs tracking-widest uppercase">Se webinaret i opptak</div>
                    </div>
@@ -926,7 +968,7 @@ const App: React.FC = () => {
             <div className="col-span-1 lg:col-span-2 bg-white rounded-[2.5rem] p-16">
                <div className="flex items-center gap-4 mb-10">
                   <div className="p-3 bg-brand-light rounded-2xl">
-                    <svg className="w-6 h-6 text-brand-slate" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    <svg className="w-6 h-6 text-brand-slate" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                   </div>
                   <h3 className="text-2xl font-medium tracking-tight">E-post signatur</h3>
                </div>
@@ -986,7 +1028,7 @@ const App: React.FC = () => {
                   <div className="aspect-[1/1.4] bg-white rounded-3xl p-10 flex flex-col mx-auto w-2/3 transform group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] origin-bottom shadow-2xl">
                      <div className="flex justify-between items-start mb-16">
                         <LogoMark className="w-8 h-8 text-brand-dark" />
-                        <div className="text-[8px] text-brand-slate opacity-40 text-right font-medium uppercase tracking-wider">Vidde Kompetanse AS<br/>Storgata 1, 0150 Oslo</div>
+                        <div className="text-[8px] text-brand-slate text-right font-medium uppercase tracking-wider">Vidde Kompetanse AS<br/>Storgata 1, 0150 Oslo</div>
                      </div>
                      <div className="space-y-6">
                         <div className="h-6 bg-brand-light rounded w-3/4"></div>
@@ -1005,13 +1047,13 @@ const App: React.FC = () => {
         {/* Last ned */}
         <Section id="last-ned" title="Ressurser">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
+                  {[
               { title: 'Logo Pakke', type: 'ZIP', size: '12 MB', color: 'bg-brand-gold text-brand-dark' },
               { title: 'Fontfiler', type: 'ZIP', size: '4 MB', color: 'bg-brand-slate text-white' },
               { title: 'SoMe Kit', type: 'ZIP', size: '65 MB', color: 'bg-brand-brown text-white' },
               { title: 'Presentasjoner', type: 'KEY', size: '24 MB', color: 'bg-brand-dark text-white' },
             ].map((item, i) => (
-              <a key={i} href="#" className="bg-white rounded-[2.5rem] p-10 hover:-translate-y-2 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] flex flex-col justify-between h-72 group">
+                     <a key={i} href="/" role="button" aria-label={`Last ned ${item.title}`} className="bg-white rounded-[2.5rem] p-10 hover:-translate-y-2 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] flex flex-col justify-between h-72 group">
                  <div className="flex justify-between items-start">
                     <span className={`px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest ${item.color}`}>{item.type}</span>
                     <svg className="w-8 h-8 text-brand-slate opacity-20 group-hover:text-brand-dark group-hover:opacity-100 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
@@ -1025,7 +1067,7 @@ const App: React.FC = () => {
           </div>
         </Section>
 
-        <footer className="mt-40 pt-12 flex justify-center items-center text-xs font-bold tracking-widest text-brand-slate opacity-40 pb-12 uppercase">
+      <footer className="mt-40 pt-12 flex justify-center items-center text-xs font-bold tracking-widest text-brand-slate pb-12 uppercase">
              <span>Designet av <a href="https://netlab.no" target="_blank" rel="noreferrer" className="text-brand-dark hover:text-brand-gold transition-colors">Netlab</a></span>
         </footer>
       </main>

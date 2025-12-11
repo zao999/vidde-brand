@@ -45,7 +45,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection, isOpen, setIsOp
             <ul className="flex flex-col space-y-2">
               {MENU_ITEMS.map((item) => (
                 <li key={item.id} className="relative">
-                  <button
+                  <button type="button"
                     onClick={() => scrollToSection(item.id)}
                     className={`
                       w-full text-left py-1.5 text-lg transition-all duration-300 tracking-wide

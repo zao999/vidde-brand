@@ -26,7 +26,7 @@ export const BRAND_COLORS: ColorSwatch[] = [
   },
   { 
     name: 'Vidde Slate', 
-    hex: '#677A7E', 
+    hex: '#6E7881', 
     pms: '7544 C', 
     cmyk: '40 20 20 40', 
     rgb: '103 122 126',

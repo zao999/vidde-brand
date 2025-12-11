@@ -42,14 +42,14 @@ const PATHS = {
 };
 
 export const LogoFull: React.FC<{ className?: string, color?: string }> = ({ className, color = "currentColor" }) => (
-  <svg viewBox="0 0 666 200" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} style={{ color }}>
+  <svg viewBox="0 0 666 200" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} style={{ color }} aria-hidden="true" focusable="false">
     {PATHS.mark}
     {PATHS.viddeText}
   </svg>
 );
 
 export const LogoLockup: React.FC<{ className?: string, color?: string, secondaryColor?: string }> = ({ className, color = "currentColor", secondaryColor }) => (
-  <svg viewBox="0 0 666 316" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+  <svg viewBox="0 0 666 316" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true" focusable="false">
     <g style={{ color: color }}>
         {PATHS.mark}
         {PATHS.viddeText}
@@ -61,20 +61,20 @@ export const LogoLockup: React.FC<{ className?: string, color?: string, secondar
 );
 
 export const LogoMark: React.FC<{ className?: string, color?: string }> = ({ className, color = "currentColor" }) => (
-  <svg viewBox="0 0 300 291" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} style={{ color }}>
+  <svg viewBox="0 0 300 291" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} style={{ color }} aria-hidden="true" focusable="false">
     {PATHS.glyph}
   </svg>
 );
 
 export const LogoName: React.FC<{ className?: string, color?: string }> = ({ className, color = "currentColor" }) => (
-  <svg viewBox="207 0 459 200" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} style={{ color }}>
+  <svg viewBox="207 0 459 200" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} style={{ color }} aria-hidden="true" focusable="false">
     {PATHS.viddeText}
   </svg>
 );
 
 export const GraphicShape1: React.FC<{ className?: string }> = ({ className }) => (
-  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-    <circle cx="100" cy="100" r="98" stroke="#677A7E" strokeWidth="2" strokeDasharray="4 4" fill="none" />
+  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true" focusable="false">
+    <circle cx="100" cy="100" r="98" stroke="#6E7881" strokeWidth="2" strokeDasharray="4 4" fill="none" />
     <g transform="translate(54, 43) scale(1)">
         <path d="M41.5 78.5L20.5 35.5H32.5L47.5 66.5L62.5 35.5H74.5L53.5 78.5H41.5Z" fill="#C69865" />
         <circle cx="85" cy="20" r="8" fill="#C69865" />
@@ -83,16 +83,16 @@ export const GraphicShape1: React.FC<{ className?: string }> = ({ className }) =
 );
 
 export const GraphicShape2: React.FC<{ className?: string }> = ({ className }) => (
-  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true" focusable="false">
      <path d="M100 20 L180 180 L20 180 Z" stroke="#C69865" strokeWidth="2" fill="none" opacity="0.3" />
-     <path d="M100 60 L140 140 L60 140 Z" fill="#677A7E" />
+    <path d="M100 60 L140 140 L60 140 Z" fill="#6E7881" />
   </svg>
 );
 
 // New Illustrations based on the provided reference (Flat corporate vector style)
 
 export const IllustrationDialogue: React.FC<{ className?: string }> = ({ className }) => (
-  <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+  <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true" focusable="false">
     {/* Split background */}
     <rect x="0" y="0" width="200" height="300" fill="#F3FBFC" />
     <rect x="200" y="0" width="200" height="300" fill="#C69865" />
@@ -125,7 +125,7 @@ export const IllustrationDialogue: React.FC<{ className?: string }> = ({ classNa
 );
 
 export const IllustrationFocus: React.FC<{ className?: string }> = ({ className }) => (
-  <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+  <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true" focusable="false">
     {/* Background */}
     <rect width="400" height="300" fill="#F3FBFC" />
     

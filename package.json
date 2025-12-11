@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "audit:pa11y": "pa11y http://localhost:3000 --reporter html --output ./pa11y-report.html",
+    "audit:pa11y:cli": "pa11y http://localhost:3000 --reporter cli",
+    "audit:lighthouse": "lighthouse http://localhost:3000 --output html --output-path=./lighthouse-report.html --chrome-flags='--headless'"
   },
   "dependencies": {
     "react": "^19.2.1",
@@ -15,6 +18,7 @@
   "devDependencies": {
     "@types/node": "^22.14.0",
     "@vitejs/plugin-react": "^5.0.0",
+    "pa11y": "^9.0.1",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"
   }
