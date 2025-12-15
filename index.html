@@ -97,12 +97,12 @@
     // --- Constants ---
     const MENU_ITEMS: MenuItem[] = [
       { id: 'introduksjon', label: 'Introduksjon' },
-      { id: 'logomerket', label: 'Logomerket' },
-      { id: 'navnetrekket', label: 'Navnetrekket' },
+      { id: 'logomerket', label: 'Glyph' },
+      { id: 'navnetrekket', label: 'Logo' },
       { id: 'typografi', label: 'Typografi' },
       { id: 'font-miksing', label: 'Font-miksing' },
       { id: 'farger', label: 'Farger' },
-      { id: 'bildebruk', label: 'Bildebruk' },
+      { id: 'bildebruk', label: 'Visuals' },
       { id: 'sosiale-medier', label: 'Sosiale Medier' },
       { id: 'malverk', label: 'Malverk' },
       { id: 'last-ned', label: 'Last ned' },
@@ -396,7 +396,7 @@
             </section>
 
             {/* Logomerket */}
-            <Section id="logomerket" title="Symbol">
+            <Section id="logomerket" title="Glyph">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                  {/* 1. Dark / Light Blue */}
                  <div className="aspect-square bg-brand-dark rounded-[2.5rem] flex items-center justify-center p-12 group hover:scale-105 transition-transform duration-500 ease-out">
@@ -460,13 +460,10 @@
                    <div className="flex-1">
                      <h3 className="text-2xl font-medium mb-4 tracking-tight">Konseptet</h3>
                      <p className="text-brand-slate leading-loose font-normal tracking-wide">
-                       Symbolet er en abstraksjon av en vidde, et landskap som åpner seg. De to formene som møtes skaper en spenning og dynamikk som representerer kunnskapsutveksling.
+                       Symbolet er en abstraksjon av en vidde, et landskap som åpner seg. De to formene som møtes skaper en spenning og dynamikk som representerer kunnskapsutveksling. Prikk representerer kunnskap som heves.
                      </p>
                    </div>
-                   <div className="flex gap-4">
-                     <div className="px-6 py-3 bg-brand-light rounded-xl text-xs font-bold text-brand-slate uppercase tracking-widest">Ratio 1:1</div>
-                     <div className="px-6 py-3 bg-brand-light rounded-xl text-xs font-bold text-brand-slate uppercase tracking-widest">SVG</div>
-                   </div>
+   
                  </div>
               </div>
             </Section>
@@ -502,6 +499,11 @@
                    </div>
                 </div>
               </div>
+
+
+              <a href="./Vidde%20logo.zip" role="button" aria-label="Last ned Logo Pakke" class="mt-8 bg-white rounded-[2.5rem] p-10 hover:-translate-y-2 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] flex flex-col justify-between h-72 group"><div class="flex justify-between items-start"><div class="flex gap-2"><span class="px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest bg-brand-gold text-black">ZIP</span></div><svg class="w-8 h-8 text-brand-slate opacity-20 group-hover:text-brand-dark group-hover:opacity-100 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg></div><div><h4 class="text-3xl font-medium mb-2 tracking-tight group-hover:text-brand-gold transition-colors">Logo Pakke</h4><p class="text-brand-slate text-sm font-mono ">12 MB</p></div></a>
+
+
             </Section>
 
             {/* Typografi */}
@@ -621,24 +623,83 @@
             </Section>
 
             {/* Bildebruk */}
-            <Section id="bildebruk" title="Illustrasjon">
+            <Section id="bildebruk" title="Visuals">
               <div className="bg-white rounded-[2.5rem] p-6 lg:p-8 overflow-hidden">
                 <div className="relative rounded-[2rem] overflow-hidden aspect-[16/9] group">
                    <img 
-                     src="2.jpg"
+                     src="222.jpg"
                      alt="Vidde Surrealist Line Art" 
-                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 grayscale contrast-125 mix-blend-multiply"
+                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 grayscale1 contrast-125 mix-blend-multiply"
                    />
                    <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/20 to-transparent"></div>
                    <div className="absolute bottom-12 left-12 text-white max-w-md">
                       <h3 className="text-3xl font-medium mb-2 tracking-tight">Surrealistisk Linjekunst</h3>
                       <p className="opacity-90 font-medium tracking-wide">Organisk linjeføring møter streng geometri.</p>
                    </div>
+
+
+                  
+
+
+
+
                 </div>
+
+
+
+
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
                    <div className="bg-brand-light rounded-[2rem] p-10 md:col-span-2 flex flex-col justify-center">
                       <h4 className="font-medium text-2xl mb-4 tracking-tight">Prompt Engineering</h4>
+
+                      
+
+
+                      
+<section class="visuals space-y-4 mb-10">
+
+  <ul class="list-disc pl-5 space-y-2 text-sm leading-relaxed mb-4">
+    <li>
+      Alle visuelle elementer er generert med Midjourney og basert på ett fast definert
+      referansebilde for å sikre konsistens i stil, komposisjon og formspråk.
+    </li>
+    <li>
+      Det visuelle uttrykket styres gjennom nøye utformede prompts som gjør det mulig
+      å variere tema og innhold uten å bryte den overordnede visuelle identiteten.
+    </li>
+    <li>
+      Hver kursserie har sin egen temafarge som representerer kursets fagområde eller tema.
+    </li>
+    <li>
+      Fargene varierer i lyshet, metning og temperatur, men holdes alltid innen samme HUE
+      som hovedpaletten for å bevare helhet og gjenkjennelighet.
+    </li>
+    <li>
+      Den temabaserte fargebruken gir hvert kurs sin egen visuelle signatur og gjør det
+      enklere for brukere å navigere, skille mellom kurs og raskt orientere seg i innholdet.
+    </li>
+    <li>
+      Systemet er laget for å skalere, slik at nye kurs og temaer kan legges til uten
+      behov for redesign eller endringer i den visuelle strukturen.
+    </li>
+  </ul>
+
+  <ul class="list-disc pl-5 space-y-2 text-sm leading-relaxed mb-10">
+    <li>Bruk en eller flere i prompt:</li>
+  <li>Vidde Dark — #0F161A</li>
+  <li>Vidde Blue Secondary — #6E7881</li>
+  <li>Vidde Light — #F3FBFC</li>
+  <li>Vidde Gold — #C69865</li>
+  <li>Vidde Brown — #2A2119</li>
+  <li>Vidde Beige — #F3EBE1</li>
+</ul>
+</section>
+
+
+
+
+
                       <p className="text-brand-slate text-sm font-mono bg-white p-6 rounded-2xl leading-relaxed">
                         1. The Unraveling Mind (Theme: Anxiety Relief) Minimalist continuous line art of a human profile silhouette where the mind is represented by a tangled scribbled knot of Dark Espresso #302418 that gently unravels into a single peaceful straight line flowing outward. Background is matte Cream #F0E4D7. A single circular accent in Muted Gold #C89867 hovers near the forehead. Psychological concept of clarity and therapy. High-end editorial illustration, vector style, emotional, no text.<br/><br/>
                         2. The Growth Mindset (Theme: Personal Development) A single sophisticated line drawing of an open hand in Dark Espresso #302418 holding a delicate, abstract seedling. The seedling is minimal, with leaves rendered in Muted Gold #C89867. The background is a split composition of White #ffffff and Cream #F0E4D7. Concept of nurturing and psychological growth. Clean lines, vast negative space, visually stunning, museum quality art, no text.<br/><br/>
@@ -661,6 +722,13 @@
                 </div>
               </div>
             </Section>
+                        <Section>
+
+
+                          
+
+
+                          
             <div className="mb-12 max-w-[1600px] mx-auto p-6 lg:px-12">
               <h3 className="text-2xl font-medium mb-8 tracking-tight">Brand Visuals</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -684,6 +752,62 @@
                 </div>
               </div>
             </div>
+
+
+
+             <div className="mb-12 max-w-[1600px] mx-auto p-6 lg:px-12">
+              <h3 className="text-2xl font-medium mb-8 tracking-tight">Brand Visuals</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="rounded-[2.5rem] overflow-hidden group bg-gray-100">
+                  <img src="components/11.jpg" alt="Brand visual 1" className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div className="rounded-[2.5rem] overflow-hidden group bg-gray-100">
+                  <img src="components/77.jpg" alt="Brand visual 2" className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div className="rounded-[2.5rem] overflow-hidden group bg-gray-100">
+                  <img src="components/33.jpg" alt="Brand visual 3" className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div className="rounded-[2.5rem] overflow-hidden group bg-gray-100">
+                  <img src="components/44.jpg" alt="Brand visual 4" className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div className="rounded-[2.5rem] overflow-hidden group bg-gray-100">
+                  <img src="components/55.jpg" alt="Brand visual 5" className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div className="rounded-[2.5rem] overflow-hidden group bg-gray-100">
+                  <img src="components/66.jpg" alt="Brand visual 6" className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                </div>
+              </div>
+            </div>
+
+
+               <div className="mb-12 max-w-[1600px] mx-auto p-6 lg:px-12">
+              <h3 className="text-2xl font-medium mb-8 tracking-tight">Brand Visuals</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="rounded-[2.5rem] overflow-hidden group bg-gray-100">
+                  <img src="components/111.jpg" alt="Brand visual 1" className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div className="rounded-[2.5rem] overflow-hidden group bg-gray-100">
+                  <img src="components/222.jpg" alt="Brand visual 2" className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div className="rounded-[2.5rem] overflow-hidden group bg-gray-100">
+                  <img src="components/333.jpg" alt="Brand visual 3" className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div className="rounded-[2.5rem] overflow-hidden group bg-gray-100">
+                  <img src="components/444.jpg" alt="Brand visual 4" className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div className="rounded-[2.5rem] overflow-hidden group bg-gray-100">
+                  <img src="components/555.jpg" alt="Brand visual 5" className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div className="rounded-[2.5rem] overflow-hidden group bg-gray-100">
+                  <img src="components/676.jpg" alt="Brand visual 6" className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                </div>
+              </div>
+            </div>
+
+
+
+
+            </Section>
             {/* Sosiale Medier */}
             <Section id="sosiale-medier" title="Sosiale Medier">
               {/* Platforms Grid */}
@@ -785,6 +909,22 @@
                        <h4 className="text-2xl font-bold tracking-tight">Story (9:16)</h4>
                        <span className="text-sm font-bold tracking-widest text-brand-slate ">1080 x 1920</span>
                     </div>
+                    
+                      <div className="flex1 items-baseline justify-between1 mb-10">
+
+
+                       <p>Det klassiske formatet hvor bredde og høyde er like.</p>
+                <ul>
+                    <li><strong>Bruksområder:</strong> Instagram Grid (oversikten på profilen), Facebook-innlegg, LinkedIn, Profilbilder.</li>
+                    <li><strong>Hvorfor bruke det:</strong> Det tryggeste valget for innhold som skal deles på tvers av flere plattformer samtidig.</li>
+                    <li><strong>Tips:</strong> Essensielt for å holde rutenettet på profilen din ryddig, og standarden for karusell-innlegg.</li>
+                </ul>
+
+</div>
+
+
+
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                        
                        {/* Story 1 - Clean Minimal */}
@@ -942,7 +1082,24 @@
                     <div className="flex items-baseline justify-between mb-10">
                        <h4 className="text-2xl font-bold tracking-tight">Feed (1:1)</h4>
                        <span className="text-sm font-bold tracking-widest text-brand-slate ">1080 x 1080</span>
+
+                       
                     </div>
+
+
+                    <div className="flex1 items-baseline justify-between1 mb-10">
+
+
+                       <p>Det klassiske formatet hvor bredde og høyde er like.</p>
+                <ul>
+                    <li><strong>Bruksområder:</strong> Instagram Grid (oversikten på profilen), Facebook-innlegg, LinkedIn, Profilbilder.</li>
+                    <li><strong>Hvorfor bruke det:</strong> Det tryggeste valget for innhold som skal deles på tvers av flere plattformer samtidig.</li>
+                    <li><strong>Tips:</strong> Essensielt for å holde rutenettet på profilen din ryddig, og standarden for karusell-innlegg.</li>
+                </ul>
+
+</div>
+
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                        
                        {/* Feed 1 - The "Hook" */}
@@ -1020,6 +1177,22 @@
                        <h4 className="text-2xl font-bold tracking-tight">Link (1.91:1)</h4>
                        <span className="text-sm font-bold tracking-widest text-brand-slate ">1200 x 628</span>
                     </div>
+
+
+                      <div className="flex items-baseline justify-between mb-10">
+
+
+                       <p>Det klassiske formatet hvor bredde og høyde er like.</p>
+                <ul>
+                    <li><strong>Bruksområder:</strong> Instagram Grid (oversikten på profilen), Facebook-innlegg, LinkedIn, Profilbilder.</li>
+                    <li><strong>Hvorfor bruke det:</strong> Det tryggeste valget for innhold som skal deles på tvers av flere plattformer samtidig.</li>
+                    <li><strong>Tips:</strong> Essensielt for å holde rutenettet på profilen din ryddig, og standarden for karusell-innlegg.</li>
+                </ul>
+
+</div>
+
+
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                        
                        {/* Link 1 - Article */}
@@ -1127,6 +1300,22 @@
                        <h4 className="text-2xl font-bold tracking-tight">Portrett (4:5)</h4>
                        <span className="text-sm font-bold tracking-widest text-brand-slate ">1080 x 1350</span>
                     </div>
+
+
+                      <div className="flex1 items-baseline justify-between1 mb-10">
+
+
+                       <p>Litt høyere enn det er bredt, men fyller ikke hele skjermen.</p>
+                <ul>
+                    <li><strong>Bruksområder:</strong> Hovedfeeden på Instagram og Facebook.</li>
+                    <li><strong>Hvorfor bruke det:</strong> Dette er det optimale formatet for feed-innlegg. Det tar opp mer plass på skjermen enn et kvadratisk bilde når folk scroller.</li>
+                    <li><strong>Fordel:</strong> Mer skjermplass = lenger synlighet = økt sjanse for engasjement (likes/kommentarer).</li>
+                </ul>
+
+</div>
+
+
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                        
                        {/* Portrait 1 - Speaker Card (Glass) */}
