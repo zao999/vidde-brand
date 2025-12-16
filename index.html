@@ -96,11 +96,9 @@
 
     // --- Constants ---
     const MENU_ITEMS: MenuItem[] = [
-      { id: 'introduksjon', label: 'Introduksjon' },
-      { id: 'logomerket', label: 'Glyph' },
+      { id: 'introduksjon', label: 'Introduksjon' },      
       { id: 'navnetrekket', label: 'Logo' },
       { id: 'typografi', label: 'Typografi' },
-      { id: 'font-miksing', label: 'Font-miksing' },
       { id: 'farger', label: 'Farger' },
       { id: 'bildebruk', label: 'Visuals' },
       { id: 'sosiale-medier', label: 'Sosiale Medier' },
@@ -395,9 +393,47 @@
                </div>
             </section>
 
-            {/* Logomerket */}
-            <Section id="logomerket" title="Glyph">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+           
+
+            {/* Navnetrekket */}
+            <Section id="navnetrekket" title="Logo">
+              <div className="flex flex-col gap-8">
+                {/* Primary Logo Construction */}
+                <div className="bg-white rounded-[2.5rem] p-12 lg:p-32 flex items-center justify-center min-h-[400px]">
+                   <LogoLockup className="w-full max-w-3xl" color="#0F161A" secondaryColor="#6E7881" />
+                </div>
+
+                {/* Color Variations Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                   {/* Dark Background */}
+                   <div className="bg-brand-dark rounded-[2.5rem] p-20 flex items-center justify-center text-white">
+                      <LogoLockup className="w-full max-w-md" color="#FFFFFF" secondaryColor="#C69865" />
+                   </div>
+                   
+                   {/* Beige Background */}
+                   <div className="bg-brand-beige rounded-[2.5rem] p-20 flex items-center justify-center relative overflow-hidden">
+                      <LogoLockup className="w-full max-w-md relative z-10" color="#0F161A" secondaryColor="#2A2119" />
+                   </div>
+
+                   {/* Slate Background */}
+                   <div className="bg-brand-slate rounded-[2.5rem] p-20 flex items-center justify-center">
+                       <LogoLockup className="w-full max-w-md" color="#FFFFFF" secondaryColor="#F3FBFC" />
+                   </div>
+
+                   {/* Gold Background */}
+                   <div className="bg-brand-gold rounded-[2.5rem] p-20 flex items-center justify-center">
+                       <LogoLockup className="w-full max-w-md" color="#0F161A" secondaryColor="#FFFFFF" />
+                   </div>
+                </div>
+              </div>
+
+
+
+
+      <h3 className="text-2xl mt-10 font-medium mb-8 tracking-tight">Glyph</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-10">
+                             
+
                  {/* 1. Dark / Light Blue */}
                  <div className="aspect-square bg-brand-dark rounded-[2.5rem] flex items-center justify-center p-12 group hover:scale-105 transition-transform duration-500 ease-out">
                    <svg width="100%" height="100%" viewBox="0 0 300 291" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -466,45 +502,21 @@
    
                  </div>
               </div>
-            </Section>
-
-            {/* Navnetrekket */}
-            <Section id="navnetrekket" title="Logo">
-              <div className="flex flex-col gap-8">
-                {/* Primary Logo Construction */}
-                <div className="bg-white rounded-[2.5rem] p-12 lg:p-32 flex items-center justify-center min-h-[400px]">
-                   <LogoLockup className="w-full max-w-3xl" color="#0F161A" secondaryColor="#6E7881" />
-                </div>
-
-                {/* Color Variations Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                   {/* Dark Background */}
-                   <div className="bg-brand-dark rounded-[2.5rem] p-20 flex items-center justify-center text-white">
-                      <LogoLockup className="w-full max-w-md" color="#FFFFFF" secondaryColor="#C69865" />
-                   </div>
-                   
-                   {/* Beige Background */}
-                   <div className="bg-brand-beige rounded-[2.5rem] p-20 flex items-center justify-center relative overflow-hidden">
-                      <LogoLockup className="w-full max-w-md relative z-10" color="#0F161A" secondaryColor="#2A2119" />
-                   </div>
-
-                   {/* Slate Background */}
-                   <div className="bg-brand-slate rounded-[2.5rem] p-20 flex items-center justify-center">
-                       <LogoLockup className="w-full max-w-md" color="#FFFFFF" secondaryColor="#F3FBFC" />
-                   </div>
-
-                   {/* Gold Background */}
-                   <div className="bg-brand-gold rounded-[2.5rem] p-20 flex items-center justify-center">
-                       <LogoLockup className="w-full max-w-md" color="#0F161A" secondaryColor="#FFFFFF" />
-                   </div>
-                </div>
-              </div>
 
 
-              <a href="./Vidde%20logo.zip" role="button" aria-label="Last ned Logo Pakke" class="mt-8 bg-white rounded-[2.5rem] p-10 hover:-translate-y-2 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] flex flex-col justify-between h-72 group"><div class="flex justify-between items-start"><div class="flex gap-2"><span class="px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest bg-brand-gold text-black">ZIP</span></div><svg class="w-8 h-8 text-brand-slate opacity-20 group-hover:text-brand-dark group-hover:opacity-100 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg></div><div><h4 class="text-3xl font-medium mb-2 tracking-tight group-hover:text-brand-gold transition-colors">Logo Pakke</h4><p class="text-brand-slate text-sm font-mono ">12 MB</p></div></a>
+                            <a href="./Vidde%20logo.zip" role="button" aria-label="Last ned Last ned logo og glyph" class="mt-8 bg-brand-light  rounded-[2.5rem] p-10 hover:-translate-y-2 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] flex flex-col justify-between h-72 group"><div class="flex justify-between items-start"><div class="flex gap-2"><span class="px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest bg-brand-gold text-black">ZIP</span></div><svg class="w-8 h-8 text-brand-slate opacity-20 group-hover:text-brand-dark group-hover:opacity-100 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg></div><div><h4 class="text-3xl font-medium mb-2 tracking-tight group-hover:text-brand-gold transition-colors">Last ned logo og glyph</h4><p class="text-brand-slate text-sm font-mono ">12 MB</p></div></a>
+
+
 
 
             </Section>
+
+
+
+
+
+
+            
 
             {/* Typografi */}
             <Section id="typografi" title="Typografi">
@@ -556,6 +568,11 @@
                    ))}
                  </div>
               </div>
+
+                            <a href="./vidde-fonts.zip" role="button" aria-label="Last ned Fontfiler" class="bg-brand-light mt-8 bg-white1 rounded-[2.5rem] p-10 hover:-translate-y-2 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] flex flex-col justify-between h-72 group"><div class="flex justify-between items-start"><div class="flex gap-2"><span class="px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest bg-brand-slate text-white">ZIP</span></div><svg class="w-8 h-8 text-brand-slate opacity-20 group-hover:text-brand-dark group-hover:opacity-100 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg></div><div><h4 class="text-3xl font-medium mb-2 tracking-tight group-hover:text-brand-gold transition-colors">Fontfiler</h4><p class="text-brand-slate text-sm font-mono ">4 MB</p></div></a>
+
+
+
             </Section>
 
             {/* Font Miksing Section */}
@@ -627,7 +644,7 @@
               <div className="bg-white rounded-[2.5rem] p-6 lg:p-8 overflow-hidden">
                 <div className="relative rounded-[2rem] overflow-hidden aspect-[16/9] group">
                    <img 
-                     src="222.jpg"
+                     src="aaa.png"
                      alt="Vidde Surrealist Line Art" 
                      className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 grayscale1 contrast-125 mix-blend-multiply"
                    />
@@ -649,7 +666,7 @@
 
 
                 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                <div className="grid grid-cols-1 md:grid-cols-1 mt-6">
                    <div className="bg-brand-light rounded-[2rem] p-10 md:col-span-2 flex flex-col justify-center">
                       <h4 className="font-medium text-2xl mb-4 tracking-tight">Prompt Engineering</h4>
 
@@ -657,7 +674,7 @@
 
 
                       
-<section class="visuals space-y-4 mb-10">
+<section class="visuals space-y-0 mb-10">
 
   <ul class="list-disc pl-5 space-y-2 text-sm leading-relaxed mb-4">
     <li>
@@ -713,24 +730,19 @@
                         10. The Deep Breath (Theme: Stress Management) An abstract visualization of breath. Expanding and contracting circular lines in Dark Espresso #302418 that look like air moving. A central focal point of calm is represented by a soft Muted Gold #C89867 shape. Background is White #ffffff. Concept of lungs, breathing, and calm. Airy, light, ethereal, minimal line art, no text.
                       </p>
                    </div>
-                   <div className="bg-brand-dark text-white rounded-[2rem] p-10 flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="text-5xl font-serif mb-3">V.6</div>
-                        <div className="text-xs opacity-50 font-bold uppercase tracking-widest">Midjourney</div>
-                      </div>
-                   </div>
+
                 </div>
               </div>
             </Section>
-                        <Section>
+                      
 
 
                           
 
 
                           
-            <div className="mb-12 max-w-[1600px] mx-auto p-6 lg:px-12">
-              <h3 className="text-2xl font-medium mb-8 tracking-tight">Brand Visuals</h3>
+            <div className="mb-12 max-w-[1600px] mx-auto p-6 mt-0 pt-0 lg:px-12 lg:pt-0">
+              <h3 className="text-2xl font-medium mb-8 tracking-tight">Brand Visuals Example 1</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="rounded-[2.5rem] overflow-hidden group bg-gray-100">
                   <img src="components/1.jpg" alt="Brand visual 1" className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
@@ -756,7 +768,7 @@
 
 
              <div className="mb-12 max-w-[1600px] mx-auto p-6 lg:px-12">
-              <h3 className="text-2xl font-medium mb-8 tracking-tight">Brand Visuals</h3>
+              <h3 className="text-2xl font-medium mb-8 tracking-tight">Brand Visuals Example 2</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="rounded-[2.5rem] overflow-hidden group bg-gray-100">
                   <img src="components/11.jpg" alt="Brand visual 1" className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
@@ -781,7 +793,7 @@
 
 
                <div className="mb-12 max-w-[1600px] mx-auto p-6 lg:px-12">
-              <h3 className="text-2xl font-medium mb-8 tracking-tight">Brand Visuals</h3>
+              <h3 className="text-2xl font-medium mb-8 tracking-tight">Brand Visuals Example 3</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="rounded-[2.5rem] overflow-hidden group bg-gray-100">
                   <img src="components/111.jpg" alt="Brand visual 1" className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
@@ -807,7 +819,6 @@
 
 
 
-            </Section>
             {/* Sosiale Medier */}
             <Section id="sosiale-medier" title="Sosiale Medier">
               {/* Platforms Grid */}
@@ -913,11 +924,11 @@
                       <div className="flex1 items-baseline justify-between1 mb-10">
 
 
-                       <p>Det klassiske formatet hvor bredde og høyde er like.</p>
+                               <p>Dette er det stående formatet som fyller hele mobilskjermen. Det mest oppslukende formatet.</p>
                 <ul>
-                    <li><strong>Bruksområder:</strong> Instagram Grid (oversikten på profilen), Facebook-innlegg, LinkedIn, Profilbilder.</li>
-                    <li><strong>Hvorfor bruke det:</strong> Det tryggeste valget for innhold som skal deles på tvers av flere plattformer samtidig.</li>
-                    <li><strong>Tips:</strong> Essensielt for å holde rutenettet på profilen din ryddig, og standarden for karusell-innlegg.</li>
+                    <li><strong>Bruksområder:</strong> Instagram Stories, Reels, TikTok, YouTube Shorts, Snapchat.</li>
+                    <li><strong>Hvorfor bruke det:</strong> Fjerner alle forstyrrelser. Perfekt for "her og nå"-innhold og videoer som skal fange oppmerksomhet.</li>
+                    <li><strong>Tips:</strong> Husk "Safe Zone". Ikke legg tekst helt øverst eller nederst der profilbilder eller knapper dekker bildet.</li>
                 </ul>
 
 </div>
@@ -1459,11 +1470,11 @@
             <Section id="last-ned" title="Ressurser">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {[
-                  { title: 'Logo Pakke', type: 'ZIP', size: '12 MB', color: 'bg-brand-gold text-black', href: './Vidde%20logo.zip' },
+                  { title: 'Last ned logo og glyph', type: 'ZIP', size: '12 MB', color: 'bg-brand-gold text-black', href: './Vidde%20logo.zip' },
                   { title: 'Fontfiler', type: 'ZIP', size: '4 MB', color: 'bg-brand-slate text-white', href: './vidde-fonts.zip' },
                   { title: 'Presentasjoner', types: ['POWERPOINT', 'WORD'], size: '32 MB', color: 'bg-brand-dark text-white' },
                 ].map((item, i) => (
-                  <a key={i} href={item.href || '/'} role="button" aria-label={`Last ned ${item.title}`} className="bg-white rounded-[2.5rem] p-10 hover:-translate-y-2 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] flex flex-col justify-between h-72 group">
+                  <a key={i} href={item.href || '/'} role="button" aria-label={`Last ned ${item.title}`} className="bg-brand-light rounded-[2.5rem] p-10 hover:-translate-y-2 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] flex flex-col justify-between h-72 group">
                      <div className="flex justify-between items-start">
                        <div className="flex gap-2">
                          {item.types ? item.types.map((t, idx) => <span key={idx} className={`px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest ${item.color}`}>{t}</span>) : <span className={`px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest ${item.color}`}>{item.type}</span>}
