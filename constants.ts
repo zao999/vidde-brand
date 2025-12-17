@@ -56,7 +56,7 @@ export const BRAND_COLORS: ColorSwatch[] = [
   },
   { 
     name: 'Vidde Brown', 
-    hex: '#2A2119', 
+    hex: '#302418', 
     pms: '476 C', 
     cmyk: '60 70 80 70', 
     rgb: '42 33 25',
